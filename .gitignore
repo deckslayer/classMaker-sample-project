@@ -1,0 +1,6 @@
+/node_modules
+/.vscode
+/models/defaults/defaultModel.js
+/modelsStructure/versions
+/modelsStructure/compiledStructure.js 
+/classMaker/importExport/CSVexported

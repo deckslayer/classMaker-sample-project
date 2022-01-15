@@ -1,0 +1,80 @@
+{
+	"classes": {
+		"user": {
+			"extends": "CustomItem",
+			"attributes": {
+				"username": {
+					"type": "string",
+					"needed": true,
+					"unique": true,
+					"frontEnd": true,
+					"default": "\"\"",
+					"name": "username",
+					"compositeKeys": "username"
+				},
+				"password": {
+					"type": "string",
+					"needed": true,
+					"frontEnd": false,
+					"default": "\"\"",
+					"unique": false,
+					"name": "password"
+				},
+				"email": {
+					"type": "string",
+					"needed": true,
+					"unique": true,
+					"frontEnd": false,
+					"default": "\"\"",
+					"name": "email",
+					"compositeKeys": "email"
+				}
+			},
+			"name": "User",
+			"collection": "User",
+			"legend": {
+				"nameClass": "User",
+				"attribute": [
+					"_id",
+					"creationTime",
+					"modifiedTime",
+					"username",
+					"password",
+					"email"
+				],
+				"static": {},
+				"virtual": []
+			},
+			"compositeKeys": {
+				"username": {
+					"keys": [
+						"username"
+					]
+				},
+				"email": {
+					"keys": [
+						"email"
+					]
+				}
+			}
+		},
+		"customitem": {
+			"name": "CustomItem",
+			"classes": [
+				"User"
+			],
+			"collection": "CustomItem",
+			"legend": {
+				"nameClass": "CustomItem",
+				"attribute": [
+					"_id",
+					"creationTime",
+					"modifiedTime"
+				],
+				"static": {},
+				"virtual": []
+			},
+			"compositeKeys": {}
+		}
+	}
+}

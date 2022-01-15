@@ -1,0 +1,27 @@
+{
+	"classes": {
+		"customItem": {},
+		"user": {
+			"extends": "CustomItem",
+			"attributes": {
+				"username": {
+					"type": "string",
+					"needed": true,
+					"unique": true,
+					"frontEnd": true
+				},
+				"password": {
+					"type": "string",
+					"needed": true,
+					"frontEnd": false
+				},
+				"email": {
+					"type": "string",
+					"needed": true,
+					"unique": true,
+					"frontEnd": false
+				}
+			}
+		}
+	}
+}
